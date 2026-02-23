@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Registration Form </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<style> 
+
+
+.navbar {
+    background: rgba(15,15,25,0.95);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 25px;}
+
+.logo {
+    width: 38px;}
+
+.nav-left a {
+    text-decoration: none;
+    color: #ddd;
+    font-size: 15px;
+    transition: 0.3s;}
+
+.nav-left a:hover {
+    color: #719dcd;}
+
+.nav-right button {
+    padding: 7px 16px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-left: 8px;}
+
+.book-btn {
+    background: #aba490;
+    color: #000;}
+
+.book-btn:hover {
+    background: #e0a800;}
+
+.create-btn {
+    background: #000102;
+    color: white;}
+
+.create-btn:hover {
+    background: #00040a;}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    padding: 20px;}
+
+.form-card {
+    display: flex;
+    flex-direction: row;
+    width: 850px;
+    max-width: 100%;
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(14px);
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+    overflow: hidden;
+    transition: transform 0.3s;}
+
+.form-card:hover {
+    transform: translateY(-5px);}
+
+.left {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255,255,255,0.05);
+    padding: 30px;}
+
+.profile-pic {
+    width: 130px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid rgba(255,255,255,0.4);}
+
+.file-input {
+    color: #fff;}
+
+.right {
+    width: 60%;
+    padding: 30px;}
+
+.notice {
+    background: rgba(255,255,255,0.2);
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    margin-bottom: 15px;
+    text-align: center;
+    transition: all 0.3s;}
+
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 6px;
+    background: rgba(255,255,255,0.9);
+    font-size: 14px;
+    transition: 0.3s;}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 0 5px lightcyan;}
+
+
+.row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;}
+
+
+.checkbox {
+    font-size: 13px;
+    margin-top: 8px;}
+
+.create-account {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 6px;
+    background: lightcyan;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;}
+
+.create-account:hover {
+    background: black;}
+
+.cancel {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: none;
+    border-radius: 6px;
+    background: #ccc;
+    cursor: pointer;
+    transition: 0.3s;}
+
+.cancel:hover {
+    background: #aaa;}
+
+@media (max-width: 768px) {
+    .form-card {
+        flex-direction: column;}
+    .left, .right {
+        width: 100%;}}
+
+</style>
+</head>
+<body>
+
+<div class="navbar">
+    <div class="nav-left">
+        <a href="#"> Home </a>
+        <a href="#"> Fare Matrix </a>
+        <a href="#"> Contact Us </a>
+    </div>
+    <div class="nav-right">
+        <button class="btn btn-light " style="color: lightblue;"> Book Now!!</button>
+        <button class="btn btn-light" style="color: lightblue;"> Create Account </button>
+    </div>
+</div>
+
+<div class="container">
+    <div class="form-card">
+
+<div class="left">
+    <img id="profilePreview" src="data:image/webp;base64,UklGRjwJAABXRUJQVlA4IDAJAACwLgCdASqUAJQAPl0qkkajoqGhJDJ8gHALiWkIcAAsYfzp/Wu0X+n/ln2Ini72zzkP13/Bf2L6t+dfgBfiX8f/zv5Xflzyh4APqj/q+5m9C/EA/VD/gcdrQA/mf9m/1P9R9cH/t/un5Se2L6H/7/+V+A3+Xf2X/k/272oPXL+zv//91r9lDR3L9SDqz1Q4xbwoE/6kbiVVbrK+AdUk+Eo5DLhKkbUb8OonJZYWgO7mJz9JLiCms0ejv8R2m7MuUHCeIJ0yiEhboCBFFZ+N9/EDEBEYM4Qpgl/aJt4dJN9dkziFuNC+v7chxIJcItUTRXz4+5cIPTp/1CLs+FaCUPy3iO8oc1YgepfIsi2UZcIATbDutTM64PFZdxKJXzs37uLGd7+bzysKJFfiqd//+3ROpdR1lo+AC0W8FKN3qw+Gv5l3kahvCgA8saX/dIYp782mdRFM3LclzmuU5lVAOSu3eOO879gc1hGmdsaN7cWpr5ot/hGhLVD/cwt3wzkAAP7Vk6sPKqxF+EowaBN7c7O426xc5L/ZKmHLp7NvTnnVxWMrDuJsUsv9GfXA6nmeS3cz24mSesbB3/F2z0Nm/M15QgriJjiruWqZDyIKDrQu0vkuZvHnTSSXqrffwbPTISJAqLLic89yeLxk3SxJTsirQtOk/JELe8OvkjcfaEQNpYt/2UObda9uliPD0qQQ3nuKBkk2A3+frf9h1gSCuQv7q/pSxml8b7YiLYoT+qCKG+gn9rSODkxub0w3BRBWiAdRRf/xYhspkb7wjcPTdRqwIVETrjeOGSXc1q/J0koiDQBQIYalrARSUZ3I12k3G2sHEIf/nHbCsaSw3dZzhETFBmgrrNdVEQ9d6W6Fa3OHfUj8EFXS3Ks4z0OjoM2CZDZTJWAMxrXSpzxVxjRjXvIl5d9STMsZA4X117nVPviXve0TfCrQBEHEhOoMiLAkRGET9rMAAUYBhE4ZA02XpnLY3K0hdPZU8EImL7IA6qiNMhLBe48bZIDUYbwvJGu7xltSNu/cTVRTo06lrl7ceOc+T5fC882QjRgiSpjZEjxiMQeg0dJDlIXF8xCGQWrxDD8GSS4nGMx5PPIBIvhbDen4uVQXZ5HuPPjJfa7qfwIG25lUlr+chMylKYQwVEGW1gh3xrpDNzdEm8+XlD4PmP2uwmCyih2OhW0nhImETjFx/qf9kmgjDCOVk9T1IaOHxJa40m2yRhlOqb0WqWh+lAlKt4vbTKMfoL3mOgkaIUg5m3g8wPvBpwDAADgm71bgdmTrGN9E0rjMSJrShmXuIyg04qKtawFuiY8n2Nvy9/S7eM9ZHU9cZjqEZW/UERxfWVLztQbOKbtUIt+I1Ax/9pdIbS8Ss8wwtahuRc5fTf8/ViR56W3vtze6+pJy6nr9EPPqeJJyc0rs9C0bnN0t4QUADPDVM6XUjCrkVv2xWluYDoMiF+XD3mMlrtU+DhLS+nskS1dMT6RUprqtPj6q1u4YyJvW/Fz+RZowfLFdMPzqrsCFFHSlUFsrv6ok8J08LoXj7HoHPxegzzUYpCBwKyuqRDgeKDaWI7bnJAdX21rE2t4OnhK+Xr7ZO0HQwGbxM3NdKvqQhZPgpznNcVWg5K05s+clQ8SMIKReNfCp0lQV1ByoIxvJnTHeh1psMhpwHsCR/d/GE5cjjkrakjaSoYRgnKhzFUKPfEfk778UC7/hNCk1z6OFALkJ3l3odMRZXzt5OCFqq53HcuCSxnv7u3u2SKDs59N7gIgx0m6y44FuenU3UKwfCBAqvZYGcYgHwkPyR9kCoQ6H0nYVruoZiq7c7QPuvtUfkw79R9CSvEPnUlFVPlOemjFl2ZWEkSW4EmanSxcBmkUssyCB1upwgscagzIsalBqYN0vUe4d+ucAKZ13S1mYjuNNwnqyXmvTNrrCetfiNbID9/QdvWeJdK6OjRMKjDZi2+71yTFJ9+yi8sYhU+k+oZzkOqH14ANr/I8gx6YodNiNJqGfVMX2lpf9mnDT/pXJAtblB7CC+VPeXyjrRSp0p1MABiAKbvONroNlpFnzs/8rez8qxEXFR56mGsjG+0+1aYQjVfpqfEa0D36F3ywsPrCRhGmplGFS+eu9oz98Pv4aEHfV+GiuOZnq+cve+gkZl6SHHVnWNlU7JyAHv3/LlXtNGgKcSz6cWOGA4QCm7+1i1bEHo6DF65+BN/bhfIlZO3D60rYIT0f4Rmvu+LfJYR4bnt+zkXgbH30ISv1z2sfogmVhaUAwYRmQsjjs6wfrzH1qW86Mye2SYy04f0sVzxF1oQ/24XBBY+g146sB33J7IgeY4+D1UEOg9I0Pqfnh8jkFf5uCLz/dDmvxPv9EPDoorzk0whVuyqYod/+kp43cm0CMvBFtRuUB8n+P0+rjHUhqVftZwUZUG4a6uJHMmJoR1fpqKN1IjBuh78DjJAknLEjgCbOUdyRvhNrEJkWBAgkSWbmPK9PdsopC0c0yeGn5iEk8hWdBSnuCXFIMA6ZYYzaptY/NAhKzRXBdSsqYSwAakh+Y3WAl99ZTytPRNjWQIqnU9huN9ZHZS2EFTgCXDRkfjTG0s2bvd9snQqW9ekAVHvs7kED2CjN7um4NihEKrXdmM3mUrDEtNGBKjZKftP0yAQ8BCQYAzApiS7EcWZnRaM3vTtptzsEHnwNL70TqZLRHx0+S6OrY8rZBGRD9ZWmTxlRmevPDoTf4d3OjiZKskRrJRQT7bkAZGxoYA6r6EGZSDpYbTCDlTFt+ZdIB6YvXfa3+ftwH+PPnDomb4/PsvdxfafKW0lbxrgWWU5fPImF7r82q/pMsJ0HZD4vHDw/fSz09BUgikhbMbwH954HHOT//fb4cH1PtMW0nlja7WzQVvbFsYx8XiId+LQ32sesSF+8Y+PIlGg7wcn06iMVx2P5TEuBDuBoUdFNCFj7nGy97l3edLyRy616Rw8lODdN6KvMYNmPtZ2ApNDsNGpQjtjZ4e6lgu/jq92KuqWnwP1CUfCqcw0HeP2d9u0qcAaNkbID3RyK6E/vRsDO3ECGL/HAfyyLyfogbc/u0kWoVQ8K5MTLn+Uz1JOQHNDuf/5onk6h7HYGnJa3cQuXSHQqeUs7qg7q9UkxkPsoWndC4/rgMiigAAAA=" class="profile-pic">
+    <input type="file" class="file-input" accept="image/*" onchange="previewImage(event)">
+</div>
+
+    <script>
+    function previewImage(event) {
+        const input = event.target;
+        const preview = document.getElementById("profilePreview");
+
+        if (input.files && input.files[0]) {
+             const reader = new FileReader();
+        reader.onload = function(e) {
+                preview.src = e.target.result;
+        }
+            reader.readAsDataURL(input.files[0]);}}
+
+    </script>
+        <div class="right">
+            <div id="formNotice" class="notice" style="display:none;"></div>
+            <h2 class="title"> REGISTRATION 📝 </h2>
+            <input type="text" placeholder="First Name" id="fname">
+            <input type="text" placeholder="Last Name" id="lname">
+
+            <div class="row">
+            <div class="col">
+                <input type="number" placeholder="Age" id="age">
+            </div>
+            
+            <div>
+            <div class="col">
+                <input type="text" placeholder="Contact Number" id="contact">
+            </div>
+
+            <input type="email" placeholder="Email" id="email">
+            <input type="text" placeholder="Ex: IAmACreepImAWerdo67@gmail.com" id="username">
+            <input type="password" placeholder="Password" id="password">
+            
+            <div class="row">
+           <div class="col">
+           <div class="form-check mb-3">
+           <label class="form-check-label" style="color: white;">
+           <input class="form-check-input" type="checkbox" name="remember"> I Accept Terms and Privacy Policy. </label>
+           </div>
+
+            <button class="btn btn-light" style="color: lightblue;" onclick="showNotice()">Create my account</button>
+            <button class="btn btn-light" style="color: lightblue;" onclick="resetForm()">Cancel</button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+function showNotice() {
+    const notice = document.getElementById("formNotice");
+    notice.innerHTML = "Account created successfully wahoo";
+    notice.style.display = "block";
+    setTimeout(() => { notice.style.display = "none"; }, 3000);
+}
+
+function resetForm() {
+    document.querySelector("form")?.reset();
+    const notice = document.getElementById("formNotice");
+    notice.style.display = "none";
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
