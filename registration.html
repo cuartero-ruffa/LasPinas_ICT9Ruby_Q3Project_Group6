@@ -187,16 +187,13 @@ input:focus {
 <div class="navbar">
     <div class="nav-left">
         <img src="https://github.com/cuartero-ruffa/LasPinas_ICT9Ruby_Q3Project_Group6/blob/main/MOVEON1.png?raw=true" class="logo">
-        <a href="index.html"> 
-        <button class="index.html">Home</button>
-        </a>
+        <a href="#"> Home </a>
         <a href="#"> Fare Matrix </a>
         <a href="#"> Schedule </a>
         <a href="#"> Help </a>
     </div>
     <div class="nav-right">
-        <button class="btn btn-light " style="color: lightgrey;" onclick="window.location.href='index.html'"> Book Now </button>
-        <button class="btn btn-light" style="color: lightgray;" onclick="window.location.href='confirmation.html'"> Create Account </button>
+        <button class="btn btn-light " style="color: lightgrey;"> Book Now </button>
     </div>
 </div>
 
@@ -247,8 +244,7 @@ input:focus {
            <label class="form-check-label" style="color: white;">
            <input class="form-check-input" type="checkbox" name="remember"> I Accept Terms and Privacy Policy. </label>
            </div>
-
-            <button class="btn btn-light" style="color: palevioletred;" onclick="showNotice()">Create my account</button>
+           
             <button class="btn btn-light" style="color: palevioletred;" onclick="resetForm()">Cancel</button>
 
         </div>
@@ -256,22 +252,6 @@ input:focus {
     </div>
 
 </div>
-
-
-<script>
-function showNotice() {
-    const notice = document.getElementById("formNotice");
-    notice.innerHTML = "✅ Account created successfully!";
-    notice.style.display = "block";
-    setTimeout(() => { notice.style.display = "none"; }, 3000);
-}
-
-function resetForm() {
-    document.querySelector("form")?.reset();
-    const notice = document.getElementById("formNotice");
-    notice.style.display = "none";
-}
-</script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
