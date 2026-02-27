@@ -167,7 +167,8 @@
     position: fixed;
     bottom: 0;
     left: 0;
-
+   .homebutton{background-color: rgba(0, 0, 0, 0);
+           color: rgba(77, 163, 255, 1);}
 
 }
 
@@ -184,14 +185,16 @@
         <div class="navbar">
     <div class="nav-left">
         <img src="MOVEON1.png" class ="logo">
-        <a href="#"> Home </a>
+        <a href="index.html"> 
+        <button class="homebutton">Home</button>
+        </a>
         <a href="#"> Fare Matrix </a>
         <a href="#"> Schedule </a>
         <a href="#"> Help </a>
     </div>
     <div class="nav-right">
-        <button class="btn btn-light " style="color: rgb(0, 0, 0);"> Book Now </button>
-        <button class="btn btn-primary" style="color: rgb(0, 0, 0);"> Create Account </button>
+        <button class="btn btn-light " style="color: rgb(0, 0, 0);" onclick="window.location.href='index.html';"> Book Now </button>
+        <button class="btn btn-primary" style="color: rgb(0, 0, 0);"onclick="window.location.href='registration.html';"> Create Account </button>
       </div>
     </div>
 
